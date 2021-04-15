@@ -43,6 +43,7 @@ const totalCumLaude = allCumlaude;
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
 let amoutOfCumLaude = 0;
+
 function cumLaude(gradesList) {
 
     for (let i = 0; i < gradesList.length; i++) {
@@ -71,12 +72,13 @@ cumLaude([6, 4, 5]);
 function averageGrade(grades) {
     const numberInArray = grades.length;
     let sum = 0;
-    for (let i = 0; i< grades.length; i++ ){
+    for (let i = 0; i < grades.length; i++) {
         sum = sum + grades[i];
     }
     const average = sum / numberInArray;
     return average;
 }
+
 const result = averageGrade(grades);
 console.log("de gemiddelde score is", result);
 
@@ -94,12 +96,13 @@ console.log("de gemiddelde score is", result);
 function averageGradeTwo(grades) {
     const numberInArray = grades.length;
     let sum = 0;
-    for (let i = 0; i< grades.length; i++ ){
+    for (let i = 0; i < grades.length; i++) {
         sum = sum + grades[i];
     }
     const average = sum / numberInArray;
     return average;
 }
+
 const result2 = averageGradeTwo([8, 9, 4, 6, 10]);
 console.log("de gemiddelde score is", result2);
 
@@ -109,6 +112,7 @@ console.log("de gemiddelde score is", result2);
 
 const toRound = result.toFixed(2);
 console.log("afronden op 2 decimalen", toRound);
+
 
 /* Bonusopdracht: hoogste cijfer */
 
@@ -122,6 +126,23 @@ console.log("afronden op 2 decimalen", toRound);
 // ---- Verwachte uitkomst: 9
 
 
+function highestNumber(grades) {
+    let highestgrade = 0;
+    for (let i =0; i < grades.length; i ++){
+
+        if (grades[i] > highestgrade){
+            highestgrade = grades[i];
+
+        }
+
+    }
+    return highestgrade;
+}
+
+const result4 = highestNumber(grades)
+console.log("beste van de class ",result4);
+
+
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
@@ -131,3 +152,19 @@ console.log("afronden op 2 decimalen", toRound);
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+function highestNumberTwo(grades) {
+    let highestgrade = 0;
+    for (let i =0; i < grades.length; i ++){
+
+        if (grades[i] > highestgrade){
+            highestgrade = grades[i];
+
+        }
+
+    }
+    return highestgrade;
+}
+
+const result5 = highestNumberTwo([8, 9, 4, 6, 10])
+console.log("beste van de class tweede opdracht ",result5);
