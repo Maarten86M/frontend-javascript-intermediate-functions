@@ -15,6 +15,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+let allCumlaude = 0;
+function cumLaudeCheck(){
+
+    for (let i = 0; i < grades.length; i++){
+        if (grades[i] >= 8  ){
+            allCumlaude = allCumlaude +1;
+        }
+    }
+}
+cumLaudeCheck();
+
+const totalCumLaude = allCumlaude;
+console.log(totalCumLaude);
+
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -26,7 +40,6 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
-
 
 
 
@@ -57,8 +70,6 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
