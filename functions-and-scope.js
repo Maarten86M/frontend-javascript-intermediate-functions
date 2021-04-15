@@ -16,19 +16,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 let allCumlaude = 0;
-function cumLaudeCheck(){
 
-    for (let i = 0; i < grades.length; i++){
-        if (grades[i] >= 8  ){
-            allCumlaude = allCumlaude +1;
+function cumLaudeCheck() {
+
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            allCumlaude = allCumlaude + 1;
         }
     }
 }
+
 cumLaudeCheck();
 
 const totalCumLaude = allCumlaude;
-console.log(totalCumLaude);
-
+// console.log(totalCumLaude);
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -41,6 +42,18 @@ console.log(totalCumLaude);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+let amoutOfCumLaude = 0;
+function cumLaude(gradesList) {
+
+    for (let i = 0; i < gradesList.length; i++) {
+        if (gradesList[i] >= 8) {
+            amoutOfCumLaude = amoutOfCumLaude + 1;
+        }
+    }
+}
+
+cumLaude([6, 4, 5]);
+// console.log(amoutOfCumLaude);
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -55,6 +68,17 @@ console.log(totalCumLaude);
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+function averageGrade(grades) {
+    const numberInArray = grades.length;
+    let sum = 0;
+    for (let i = 0; i< grades.length; i++ ){
+        sum = sum + grades[i];
+    }
+    const average = sum / numberInArray;
+    return average;
+}
+const result = averageGrade(grades);
+console.log("de gemiddelde score is", result);
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -67,10 +91,24 @@ console.log(totalCumLaude);
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
 
+function averageGradeTwo(grades) {
+    const numberInArray = grades.length;
+    let sum = 0;
+    for (let i = 0; i< grades.length; i++ ){
+        sum = sum + grades[i];
+    }
+    const average = sum / numberInArray;
+    return average;
+}
+const result2 = averageGradeTwo([8, 9, 4, 6, 10]);
+console.log("de gemiddelde score is", result2);
+
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+const toRound = result.toFixed(2);
+console.log("afronden op 2 decimalen", toRound);
 
 /* Bonusopdracht: hoogste cijfer */
 
